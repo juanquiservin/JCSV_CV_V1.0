@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Carlos Servin Vargas - Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+</head>
+<body>
+    <div id="loader" class="loader">
+        <div class="ring"></div>
+    </div>
+    <div class="container">
+        <header>
+            <div class="window-buttons">
+                <span class="close"></span>
+                <span class="minimize"></span>
+                <span class="maximize"></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="content">
+                <section class="ideas">
+                    <h2>My Online Curriculum Vitae</h2>
+                    <h3>Juan Carlos Servin Vargas</h3>
+                    <p>Project Manager | AI and Emerging Technologies Specialist</p>
+                    <a href="http://www.linkedin.com/in/juancarlosservin-growth" target="_blank">LinkedIn Profile</a>
+                </section>
+
+                <div class="dashboard">
+                    <button class="dashboard-btn" data-section="about">About Me</button>
+                    <button class="dashboard-btn" data-section="experience">Experience</button>
+                    <button class="dashboard-btn" data-section="education">Education</button>
+                    <button class="dashboard-btn" data-section="projects">Projects</button>
+                    <button class="dashboard-btn" data-section="skills">Skills</button>
+                    <button class="dashboard-btn" data-section="contact">Contact</button>
+                </div>
+
+                <div id="card-container" class="hidden">
+                    <div id="card-content"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="sections-content" style="display: none;">
+        <section id="about" class="about-item">
+            <h2>About Me</h2>
+            <div class="subcard">
+                <p>I'm a <strong>growth-oriented professional</strong> specializing in <strong>Artificial Intelligence</strong> and <strong>emerging technologies</strong>. Currently pursuing <strong>IBM AI Professional Developer certification</strong>, I aim to develop <strong>innovative AI solutions</strong> for tech companies. With experience in creating and managing businesses like <strong>CYGN Mobile</strong>, I've implemented <strong>digital marketing strategies</strong>, <strong>Google Ads</strong>, and <strong>advanced technological tools</strong>. I'm also preparing to start <strong>Google's PMP certification</strong> to enhance my <strong>AI project management skills</strong> and pursue <strong>remote technology job opportunities</strong>.</p>
+            </div>
+        </section>
+
+        <section id="experience" class="experience-item">
+            <h2>Experience</h2>
+            <div class="subcard">
+                <h3>Founder - CYGN Creative Youth Gaming Network</h3>
+                <p><strong>March 2023 - Present</strong> | Mexico City, Mexico</p>
+                <ul>
+                    <li><strong>Conceptualized and launched</strong> CYGN, a content creation company with over 2 million views.</li>
+                    <li>Evolved the project into <strong>CYGN Mobile</strong>, an innovative mobile phone company for gamers.</li>
+                    <li>Generated over <strong>$500,000 MXN</strong> through influencer campaigns.</li>
+                    <li>Established a strategic alliance with <strong>Turtle Beach</strong>, a leading company in the gaming industry.</li>
+                    <li>Led a diverse team of over <strong>30 people</strong>, including editing, graphic design, social media, and influencers.</li>
+                    <li>Successfully managed the creation of the first gamer telephony in Mexico without own capital investment.</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Business Analyst - Grupo Modelo S.A. de C.V.</h3>
+                <p>October 2022 - February 2023 (5 months) | Mexico City, Mexico</p>
+                <ul>
+                    <li>Coordinated and managed glass usage for injection and returnability of bottled beer.</li>
+                    <li>Updated and created databases for implementation in a planning system.</li>
+                    <li>Optimized information for better internal data control.</li>
+                    <li>Implemented data in planning and optimization platform.</li>
+                    <li>Controlled glass injection levels for Mexico.</li>
+                    <li>Generated relevant information for executive-level decision making.</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Market Specialist - Service Club Delivery</h3>
+                <p>May 2021 - August 2021 (4 months) | Barcelona, Spain</p>
+                <ul>
+                    <li>Created campaigns and posts to attract drivers for UberEats, DoorDash, PostMates in the Netherlands.</li>
+                    <li>Conducted market research to generate potential leads in the Dutch market.</li>
+                    <li>Executed strategies for brand positioning in Europe through campaigns and web positioning.</li>
+                    <li>Increased lead generation by 200% through campaigns and web positioning.</li>
+                    <li>Implemented SEO strategies using keywords.</li>
+                    <li>Created campaigns and posts attracting over 150 drivers.</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Software Service Provider - Microsoft</h3>
+                <p>December 2019 - March 2020 (4 months) | Mexico City, Mexico</p>
+                <ul>
+                    <li>Specialized in Azure AZ500 and identified improvement opportunities for company clients.</li>
+                    <li>Created projects and strategies for Billboard 500 companies.</li>
+                    <li>Coordinated with the team on possible technological solutions for customer service.</li>
+                    <li>Strengthened relationships with Grupo Elektra through support in internal company projects.</li>
+                    <li>Created an IoT project relating "Oui" telephony through a mobile app designed for smart home control.</li>
+                    <li>Learned SCRUM methodology.</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Growth Specialist - Asiatic Connection</h3>
+                <p>September 2017 - June 2019 (1 year 10 months) | Mexico City, Mexico</p>
+                <ul>
+                    <li>Created campaigns and strategies to increase leads through web positioning.</li>
+                    <li>Led and analyzed company social networks, creating content and assigning indicators.</li>
+                    <li>Coordinated end-to-end management of Shopify and Amazon e-commerce for positioning a new company brand.</li>
+                    <li>Managed the import process of products from China to Latin America.</li>
+                    <li>Organized and managed company client trips to the Canton Fair and Southeast Asia.</li>
+                    <li>Increased monthly leads by over 350 through Google Adwords campaign.</li>
+                    <li>Achieved approximate monthly income of $150,000 MXN thanks to generated leads.</li>
+                    <li>Created and positioned the CuttieCup brand in Mexico.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="education" class="education-item">
+            <h2>Education</h2>
+            <div class="subcard">
+                <h3>Tecnológico de Monterrey</h3>
+                <p><strong>Bachelor in International Business</strong> (2018 - 2022)</p>
+            </div>
+            <div class="subcard">
+                <h3>Universitat de Barcelona</h3>
+                <p><strong>International Experience</strong>, Bachelor in International Business (January 2021 - September 2021)</p>
+            </div>
+        </section>
+
+        <section id="projects" class="project-item">
+            <h2>Projects and Achievements</h2>
+            <div class="subcard">
+                <ul>
+                    <li>Created the first Mexican OMV telephony for gamers, <strong>CYGN Mobile</strong>.</li>
+                    <li>Developed a monetizable <strong>YouTube channel</strong> with over 2 million views.</li>
+                    <li>Established a successful alliance with <strong>TurtleBeach</strong>, one of the most recognized companies in the gaming world.</li>
+                    <li>Created a self-managed online store for more than <strong>10 different influencers</strong>, selling their products and services autonomously.</li>
+                    <li>Managed a team of over <strong>30 people</strong> within the CYGN ecosystem, including editing, graphic design, social media, and influencer teams.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="skills" class="skill-item">
+            <h2>Skills</h2>
+            <div class="subcard">
+                <h3>Current Technical Skills:</h3>
+                <ul>
+                    <li><strong>AI Tools:</strong> ChatGPT, Midjourney, DALL-E, Copilot, Gemini, Claude</li>
+                    <li><strong>Prompt Engineering</strong></li>
+                    <li><strong>Digital Marketing Strategies</strong> and Google Ads</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Developing Skills (through IBM AI Professional Developer course):</h3>
+                <ul>
+                    <li>Programming Languages: Python, HTML, CSS, Javascript</li>
+                    <li>Frameworks and Libraries: Flask, React, NumPy, Pandas</li>
+                    <li>Artificial Intelligence: TensorFlow, PyTorch, Scikit-learn</li>
+                    <li>Web Development: Full-stack development, RESTful APIs</li>
+                    <li>Cloud Computing: IBM Cloud, basics of AWS and Azure</li>
+                    <li>Databases: SQL, NoSQL</li>
+                    <li>Version Control: Git, GitHub</li>
+                    <li>Agile Methodologies: Scrum, Kanban</li>
+                    <li>AI Tools: IBM Watson, OpenAI GPT, Hugging Face</li>
+                    <li>Data Analysis and Visualization: Tableau, Matplotlib</li>
+                    <li>AI Ethics and Best Practices</li>
+                </ul>
+            </div>
+            <div class="subcard">
+                <h3>Soft Skills:</h3>
+                <ul>
+                    <li>Effective communication and teamwork</li>
+                    <li>Creative problem-solving</li>
+                    <li>Leadership and management of cross-functional teams</li>
+                    <li>Adaptability and ability to work in dynamic environments</li>
+                    <li>Strategic thinking and long-term planning</li>
+                    <li>Negotiation and relationship management</li>
+                    <li>Results-oriented and ability to work under pressure</li>
+                    <li>Innovation and critical thinking</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-item">
+            <h2>Contact Me</h2>
+            <div class="subcard">
+                <p>Phone: 5521062780</p>
+                <p>Email: servinvargasjc@gmail.com</p>
+                <p>LinkedIn: <a href="http://www.linkedin.com/in/juancarlosservin-growth" target="_blank">juancarlosservin-growth</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+    <script>
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                document.getElementById('loader').style.opacity = '0';
+                setTimeout(() => {
+                    document.getElementById('loader').style.display = 'none';
+                    document.getElementById('content').style.display = 'block';
+                }, 500); // Allow time for fade-out
+            }, 3000); // Display loader for 3 seconds
+        });
+    </script>
+</body>
+</html>
